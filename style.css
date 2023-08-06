@@ -6,12 +6,23 @@
 body {
     background-color: #292524;
     color: #fafaf9;
-    font-family: 'Sono', sans-serif;
-    padding: 40px;
+    font-family: "Sono", sans-serif;
+    padding: 48px 64px;
 }
 
-.header{
+/* MAIN LAYOUTS */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.header {
     margin-bottom: 40px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .fact-form {
@@ -21,11 +32,38 @@ body {
     text-align: center;
 }
 
+.main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 48px;
+}
+
+
+
+/* ELEMENTS */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px
+}
+
+.logo img {
+    width: 64px;
+    height: 64px;
+}
+
 h1 {
     font-size: 42px;
     text-transform: uppercase;
-    font-family: Coiny, sans-serif;
+    font-family: "Coiny", sans-serif;
+    line-height: 1;
+    margin-top: 6px;
+    margin-left: 20px;
+}
 
+.category {
+    margin-bottom: 12px;
 }
 
 .fact {
@@ -34,6 +72,11 @@ h1 {
     background-color: #44403c;
     margin-bottom: 16px;
     padding: 16px 24px;
+    letter-spacing: -1px;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 .tag {
@@ -43,8 +86,59 @@ h1 {
     padding-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 100px;
+}
+
+.vote-buttons {
+    margin-left: auto;
 }
 
 ul {
     list-style: none;
+}
+
+.source:link, 
+.source:visited {
+    color: #a8a29e;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.source:hover, 
+.source:active {
+    color: #3b82f6;
+}
+
+.btn {
+    border: none;
+    font-family: "Coiny", sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+    color: inherit;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(110%) rotate(-2deg);
+    cursor: pointer;
+}
+
+.btn-large {
+    font-size: 20px;
+    padding: 20px 32px 17px;
+}
+
+.btn-all-categories{
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.btn-category {
+    width: 100%;
+    background-image: none;
 }
